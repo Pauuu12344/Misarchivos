@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversor de Temperatura</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta name = "description" content="Conversor"> <!-- Descripcion de la pagina web -->
+        <meta name = "keywords" content="temperatura, longitud, moneda"> <!-- Las palabras claves para los navegadores -->
+        <meta name = "author" content="Ana Paulina Duran Martinez"> <!-- Autor-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+      <link href="style/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="style/Estilo.css" rel="stylesheet" type="text/css"/>  
+    <style>
+        .custompurple {
+            background-color: lavender;
+            color: white;
+            padding: 60px;
+            margin: 20px;
+     
+        }
+        .center {
+            text-align: center;
+        }
+        .blue-section {
+    background-color: #c3d9e3;
+    padding: 20px;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-12 custompurple">
+                <header class="col-12">
+                    <h1 class="text-info text-center">Conversor de Temperatura</h1>
+                </header>
+                <div class="row justify-content-center">
+                    <div class="col-10 ">
+                        <div class="input-group">
+                            <select class="form-select" aria-label="Default select example" id="selector_uno1">
+                                <option selected>Unidad</option>
+                                <option value="1">Fahrenheit (°F)</option>
+                                <option value="2">Kelvin (°K)</option>
+                            </select>
+                            <input type="number" id="cantidad_uno1" placeholder="0" value="0">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-10 text-center">
+                        <button type="button" class="btn btn-primary btn-lg" id="botonInvertir1">Invertir</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="input-group">
+                            <select class="form-select" aria-label="Default select example" id="selector_dos1">
+                                <option selected></option>
+                                <option  selected value="1">Centigrados (°C)</option>
+                            </select>
+                            <input type="number" id="cantidad_dos1" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <section class="text-center blue-section">
+        <h2>Descripción de las escalas de medición:</h2>
+        <ul>
+            <li>
+                <strong>Fahrenheit (°F):</strong> Escala de temperatura utilizada principalmente en los Estados Unidos. El punto de congelación del agua se define en 32°F y el punto de ebullición en 212°F. Esta escala fue propuesta por Daniel Gabriel Fahrenheit en el siglo XVIII.
+            </li>
+            <li>
+                <strong>Kelvin (°K):</strong> Escala de temperatura absoluta utilizada en ciencias y en muchas aplicaciones técnicas. El punto de congelación del agua se define en 273.15 K y el punto de ebullición en 373.15 K. El cero absoluto, la temperatura más baja posible, se define como 0 Kelvin. Esta escala fue propuesta por Lord Kelvin en el siglo XIX.
+            </li>
+            <li>
+                <strong>Centigrados (°C):</strong> También conocida como Celsius, es una escala de temperatura ampliamente utilizada en todo el mundo. El punto de congelación del agua se define en 0°C y el punto de ebullición en 100°C. Esta escala fue propuesta por Anders Celsius en el siglo XVIII.
+            </li>
+        </ul>
+    </section>
+            </div>
+            
+        </div>
+       
+        <div class="row">
+            <div class="col-md-12 custompurple">
+                <header class="col-12">
+                    <h1 class="text-info text-center">Conversor de Unidades de Medida</h1>
+                </header>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="input-group">
+                            <select class="form-select" aria-label="Default select example" id="selector_uno2">
+                                <option selected>Unidad</option>
+                                <option value="1">Pulgadas (in) </option>
+                                <option value="2">Pies (ft)</option>
+                                  <option value="3">Yardas (yd)</option>
+                                    <option value="4">Millas (mi)</option>
+                            </select>
+                            <input type="number" id="cantidad_uno2" placeholder="0" value="0">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-10 text-center">
+                        <button type="button" class="btn btn-primary btn-lg" id="botonInvertir2">Invertir</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="input-group">
+                            <select class="form-select" aria-label="Default select example" id="selector_dos2">
+                                <option selected></option>
+                                <option  selected value="1">Centìmetros (cm)</option>
+                            </select>
+                            <input type="number" id="cantidad_dos2" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <section class=" text-center blue-section">
+        <h2>Descripción de las unidades de longitud:</h2>
+        <ul>
+            <li>
+                <strong>Pulgadas (in):</strong> Unidad de longitud utilizada comúnmente en el sistema imperial. Una pulgada equivale a 2.54 centímetros.
+            </li>
+            <li>
+                <strong>Pies (ft):</strong> Unidad de longitud utilizada comúnmente en el sistema imperial. Un pie equivale a 12 pulgadas o aproximadamente 30.48 centímetros.
+            </li>
+            <li>
+                <strong>Yardas (yd):</strong> Unidad de longitud utilizada comúnmente en el sistema imperial. Una yarda equivale a 3 pies o aproximadamente 91.44 centímetros.
+            </li>
+            <li>
+                <strong>Millas (mi):</strong> Unidad de longitud utilizada comúnmente en el sistema imperial. Una milla equivale a 1,609.34 metros.
+            </li>
+            <li>
+                <strong>Centímetros (cm):</strong> Unidad de longitud utilizada en el sistema métrico. Un centímetro equivale a 0.3937 pulgadas.
+            </li>
+        </ul>
+    </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 custompurple">
+                <header class="col-12">
+                    <h1 class="text-info text-center">Conversor de Moneda</h1>
+                </header>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="input-group">
+                            <select class="form-select" aria-label="Default select example" id="selector_uno3">
+                                <option selected>Unidad</option>
+                                <option value="1">Dòlar (USD)</option>
+                                <option value="2">Euro (EUR)</option>
+                                   <option value="2">Peso chileno (CLP)</option>
+                            </select>
+                            <input type="number" id="cantidad_uno3" placeholder="0" value="0">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-10 text-center">
+                        <button type="button" class="btn btn-primary btn-lg" id="botonInvertir3">Invertir</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="input-group">
+                            <select class="form-select" aria-label="Default select example" id="selector_dos3">
+                                <option selected></option>
+                                <option  selected value="1">Peso mexicano (MXN)</option>
+                            </select>
+                            <input type="number" id="cantidad_dos3" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                
+                <section class="blue-section text-center">
+        <h2>Descripción de las unidades de moneda:</h2>
+        <ul>
+            <li>
+                <strong>Dólar (USD):</strong> Moneda de curso legal en los Estados Unidos y ampliamente utilizada en todo el mundo. Su símbolo es $ y se utiliza en muchas transacciones internacionales.
+            </li>
+            <li>
+                <strong>Euro (EUR):</strong> Moneda utilizada por la mayoría de los países de la Unión Europea. Su símbolo es € y es una de las principales monedas de reserva a nivel mundial.
+            </li>
+            <li>
+                <strong>Peso chileno (CLP):</strong> Moneda de curso legal en Chile. Su símbolo es $ y se utiliza en transacciones dentro del país.
+            </li>
+            <li>
+                <strong>Peso mexicano (MXN):</strong> Moneda de curso legal en México. Su símbolo es $ y se utiliza en transacciones dentro del país.
+            </li>
+        </ul>
+    </section>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="Js/conversor.js" type="text/javascript"></script>
+</body>
+</html>
+
+
+
